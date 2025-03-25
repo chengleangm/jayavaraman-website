@@ -7,3 +7,9 @@ Thumbs.db
 .vscode
 *.swp
 *.swo
+
+# Don't ignore these important files
+!index.html
+!styles/
+!js/
+!img/
