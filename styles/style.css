@@ -1,0 +1,246 @@
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+    padding: clamp(20px, 5vw, 40px); /* Fluid padding */
+    background: linear-gradient(to bottom right, #f0f2f5, #dfe4ea);
+    line-height: 1.6;
+    overflow-x: hidden;
+    animation: fadeInBody 1.2s ease-out forwards;
+}
+
+header {
+    text-align: center;
+    padding: clamp(30px, 8vw, 60px) clamp(20px, 5vw, 40px); /* Fluid padding */
+    background: linear-gradient(135deg, #2b2d42, #3d405b);
+    color: white;
+    margin-bottom: clamp(30px, 6vw, 60px); /* Fluid margin */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    border-radius: 16px;
+    position: relative;
+    animation: slideInHeader 1s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
+}
+
+header h1 {
+    font-size: clamp(1.8rem, 5vw, 3rem); /* Fluid font size */
+    font-weight: 700;
+    margin: 0 0 15px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+header p {
+    font-size: clamp(1rem, 3vw, 1.2rem); /* Fluid font size */
+    opacity: 0.95;
+    margin: 0 0 clamp(15px, 4vw, 30px);
+}
+
+.header-accent {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: clamp(100px, 15vw, 200px); /* Fluid width */
+    height: 6px;
+    background: linear-gradient(90deg, #81ecec, #00cec9);
+    border-radius: 3px 3px 0 0;
+    animation: expandAccent 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.8s forwards;
+    transform-origin: center;
+    width: 0;
+}
+
+.category-filter {
+    display: flex;
+    justify-content: center;
+    gap: clamp(10px, 2vw, 20px); /* Fluid gap */
+    padding: clamp(10px, 3vw, 20px) 0;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: clamp(8px, 2vw, 12px) clamp(15px, 3vw, 25px); /* Fluid padding */
+    background: rgba(255,255,255,0.15);
+    border: none;
+    border-radius: 30px;
+    color: white;
+    font-size: clamp(0.85rem, 2.5vw, 1rem); /* Fluid font size */
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    animation: fadeInBtn 0.6s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
+}
+
+.filter-btn:hover {
+    background: rgba(255,255,255,0.25);
+    transform: translateY(-3px);
+}
+
+.filter-btn.active {
+    background: #81ecec;
+    color: #2b2d42;
+    box-shadow: 0 4px 15px rgba(129,236,236,0.4);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(clamp(250px, 40vw, 340px), 1fr)); /* Fluid column width */
+    gap: clamp(20px, 4vw, 50px); /* Fluid gap */
+    padding: 0 clamp(10px, 3vw, 40px); /* Fluid padding */
+    max-width: 1600px;
+    margin: 0 auto;
+    opacity: 0;
+    transition: opacity 0.8s ease-out;
+}
+
+.t-shirt-card {
+    background: white;
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+    overflow: hidden;
+    border: 1px solid rgba(0,0,0,0.03);
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.t-shirt-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+    animation: fadeInUp 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
+}
+
+.t-shirt-card:hover {
+    transform: translateY(-15px) scale(1.03);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.img-container {
+    position: relative;
+    width: 100%;
+    padding-top: 100%; /* 1:1 aspect ratio */
+    background: #f8f9fa;
+    overflow: hidden;
+}
+
+.t-shirt-card img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    border-radius: 24px 24px 0 0;
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+}
+
+.t-shirt-card img.loaded {
+    opacity: 1;
+    transition: opacity 0.6s ease-in;
+}
+
+.t-shirt-card:hover img {
+    transform: translate(-50%, -50%) scale(1.15);
+    filter: brightness(1.08) contrast(1.05);
+}
+
+.card-content {
+    padding: clamp(20px, 5vw, 35px); /* Fluid padding */
+    background: linear-gradient(to top, rgba(255,255,255,1), rgba(255,255,255,0.7));
+    transition: all 0.4s ease;
+}
+
+.t-shirt-card h3 {
+    margin: 0 0 clamp(8px, 2vw, 12px); /* Fluid margin */
+    color: #2b2d42;
+    font-size: clamp(1.2rem, 4vw, 1.5rem); /* Fluid font size */
+    font-weight: 600;
+}
+
+.t-shirt-card p {
+    color: #5c6370;
+    font-size: clamp(0.9rem, 3vw, 1rem); /* Fluid font size */
+    margin: 0;
+}
+
+.loading-spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: clamp(40px, 10vw, 60px); /* Fluid size */
+    height: clamp(40px, 10vw, 60px);
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #81ecec;
+    border-radius: 50%;
+    animation: spin 1s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite;
+}
+
+.error-message {
+    color: #e63946;
+    padding: clamp(20px, 5vw, 30px); /* Fluid padding */
+    font-size: clamp(1rem, 3vw, 1.2rem); /* Fluid font size */
+    background: rgba(255,255,255,0.9);
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    animation: fadeInUp 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
+}
+
+/* Animations */
+@keyframes fadeInBody { from { opacity: 0; } to { opacity: 1; } }
+@keyframes slideInHeader { from { opacity: 0; transform: translateY(-30px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes expandAccent { from { width: 0; } to { width: clamp(100px, 15vw, 200px); } }
+@keyframes fadeInBtn { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(50px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes spin { 0% { transform: translate(-50%, -50%) rotate(0deg); } 100% { transform: translate(-50%, -50%) rotate(360deg); } }
+
+/* Responsive Breakpoints */
+@media (max-width: 1024px) { /* Tablets and small laptops */
+    .grid-container {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+    header h1 {
+        font-size: clamp(1.6rem, 4vw, 2.5rem);
+    }
+}
+
+@media (max-width: 768px) { /* Smaller tablets and large phones */
+    .grid-container {
+        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    }
+    .category-filter {
+        gap: 15px;
+    }
+    .filter-btn {
+        padding: clamp(6px, 1.5vw, 10px) clamp(12px, 2.5vw, 18px);
+    }
+}
+
+@media (max-width: 480px) { /* Small phones */
+    .grid-container {
+        grid-template-columns: 1fr; /* Single column */
+        gap: 30px;
+    }
+    header {
+        padding: clamp(20px, 6vw, 40px) clamp(15px, 4vw, 20px);
+    }
+    .category-filter {
+        gap: 10px;
+        padding: 15px 0;
+    }
+    .filter-btn {
+        padding: clamp(6px, 2vw, 8px) clamp(10px, 3vw, 15px);
+        font-size: clamp(0.8rem, 2.5vw, 0.95rem);
+    }
+    .t-shirt-card h3 {
+        font-size: clamp(1.1rem, 4vw, 1.3rem);
+    }
+}
+
+@media (min-width: 1600px) { /* Ultra-wide screens */
+    .grid-container {
+        grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+    }
+    header h1 {
+        font-size: clamp(2.5rem, 4vw, 3.5rem);
+    }
+}
