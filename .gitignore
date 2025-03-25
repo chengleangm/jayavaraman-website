@@ -2,14 +2,17 @@
 .DS_Store
 Thumbs.db
 
-# Editor directories and files
-.idea
-.vscode
+# Editor files
+.idea/
+.vscode/
 *.swp
 *.swo
 
-# Don't ignore these important files
-!index.html
-!styles/
-!js/
-!img/
+# Keep these directories
+!*/
+!*.html
+!*.css
+!*.js
+!*.jpg
+!*.png
+!*.gif
