@@ -1,9 +1,18 @@
-# JAYAVARAMAN T-Shirt Showcase
+# T-Shirt Showcase Website
 
-A modern, responsive website showcasing our t-shirt designs.
+A responsive website showcasing our exclusive t-shirt designs.
+
+## Live Demo
+Visit the site at: https://chengleangm.github.io/jayavaraman-website/
 
 ## Features
 - Responsive design
-- Filter by categories
-- Modern animations
-- Dynamic loading
+- Category filtering
+- Dynamic product display
+- Modern UI/UX
+
+## Technologies Used
+- HTML5
+- CSS3
+- JavaScript
+- Google Fonts
