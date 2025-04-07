@@ -6,13 +6,20 @@
     <title>T-Shirt Showcase - Our Designs</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="js/script.js" defer></script>
 </head>
 <body>
-    <header>
-        <h1>Our T-Shirt Designs</h1>
+    <header role="banner">
+        <h1>Welcome to Jayavaraman T-Shirts</h1>
         <p>Browse Our Exclusive, Hand-Crafted Collection</p>
         <div class="header-accent"></div>
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Search designs..." aria-label="Search designs">
+            <button id="search-btn" aria-label="Search">
+                <i class="material-icons">search</i>
+            </button>
+        </div>
         <nav class="category-filter">
             <button class="filter-btn active" data-category="all">All Designs</button>
             <button class="filter-btn" data-category="graphic">Graphic</button>
@@ -21,8 +28,17 @@
         </nav>
     </header>
 
-    <main class="grid-container">
+    <main id="shop" class="grid-container" role="main">
         <!-- T-shirt cards will be dynamically inserted here -->
     </main>
-</body>
+
+    <footer role="contentinfo">
+        <p>&copy; 2023 Jayavaraman T-Shirts. All rights reserved.</p>
+        <p>Follow us on 
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a>, 
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>, and 
+    </footer> </p>
+</body>ooter>
+
+</html></body>
 </html>

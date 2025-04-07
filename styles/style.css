@@ -10,27 +10,27 @@ body {
 
 header {
     text-align: center;
-    padding: clamp(30px, 8vw, 60px) clamp(20px, 5vw, 40px); /* Fluid padding */
+    padding: clamp(40px, 10vw, 80px) clamp(20px, 5vw, 40px); /* Increased padding */
     background: linear-gradient(135deg, #2b2d42, #3d405b);
     color: white;
-    margin-bottom: clamp(30px, 6vw, 60px); /* Fluid margin */
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-    border-radius: 16px;
+    margin-bottom: clamp(40px, 8vw, 80px); /* Increased margin */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4); /* Enhanced shadow */
+    border-radius: 20px; /* Slightly rounded corners */
     position: relative;
-    animation: slideInHeader 1s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
+    animation: slideInHeader 1.2s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
 }
 
 header h1 {
-    font-size: clamp(1.8rem, 5vw, 3rem); /* Fluid font size */
-    font-weight: 700;
-    margin: 0 0 15px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    font-size: clamp(2rem, 6vw, 4rem); /* Larger font size */
+    font-weight: 800; /* Bolder text */
+    margin: 0 0 20px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4); /* Stronger shadow */
 }
 
 header p {
-    font-size: clamp(1rem, 3vw, 1.2rem); /* Fluid font size */
+    font-size: clamp(1.2rem, 4vw, 1.5rem); /* Larger font size */
     opacity: 0.95;
-    margin: 0 0 clamp(15px, 4vw, 30px);
+    margin: 0 0 clamp(20px, 5vw, 40px);
 }
 
 .header-accent {
@@ -69,8 +69,9 @@ header p {
 }
 
 .filter-btn:hover {
-    background: rgba(255,255,255,0.25);
-    transform: translateY(-3px);
+    background: rgba(255,255,255,0.35);
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 5px 15px rgba(255,255,255,0.2);
 }
 
 .filter-btn.active {
@@ -81,10 +82,10 @@ header p {
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(clamp(250px, 40vw, 340px), 1fr)); /* Fluid column width */
-    gap: clamp(20px, 4vw, 50px); /* Fluid gap */
-    padding: 0 clamp(10px, 3vw, 40px); /* Fluid padding */
-    max-width: 1600px;
+    grid-template-columns: repeat(auto-fill, minmax(clamp(280px, 40vw, 360px), 1fr)); /* Wider cards */
+    gap: clamp(30px, 5vw, 60px); /* Increased gap */
+    padding: 0 clamp(20px, 5vw, 50px); /* Increased padding */
+    max-width: 1800px; /* Wider container */
     margin: 0 auto;
     opacity: 0;
     transition: opacity 0.8s ease-out;
@@ -183,6 +184,85 @@ header p {
     border-radius: 12px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     animation: fadeInUp 0.9s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
+}
+
+/* Remove hero section styles */
+.hero {
+    /* Removed styles */
+}
+
+.hero h2 {
+    /* Removed styles */
+}
+
+.hero p {
+    /* Removed styles */
+}
+
+.cta-button {
+    /* Removed styles */
+}
+
+/* Adjust footer spacing */
+footer {
+    text-align: center;
+    padding: 30px; /* Increased padding */
+    background: linear-gradient(135deg, #3d405b, #2b2d42); /* Gradient background */
+    color: white;
+    font-size: 1rem; /* Slightly larger font */
+    margin-top: clamp(50px, 10vw, 100px); /* Increased margin */
+    border-radius: 20px; /* Rounded corners */
+    box-shadow: 0 -15px 40px rgba(0, 0, 0, 0.4); /* Enhanced shadow */
+}
+
+footer a {
+    color: #81ecec;
+    text-decoration: none;
+    font-weight: 700; /* Bolder links */
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #00cec9; /* Brighter hover color */
+    text-decoration: underline;
+}
+
+/* Search Bar */
+.search-bar {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+    max-width: 600px;
+    gap: 10px;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: 2px solid #81ecec;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.search-bar input:focus {
+    border-color: #00cec9;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background: #81ecec;
+    color: #2b2d42;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.search-bar button:hover {
+    background: #00cec9;
 }
 
 /* Animations */
