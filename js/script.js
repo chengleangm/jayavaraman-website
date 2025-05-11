@@ -28,6 +28,9 @@ async function loadTshirts(category = 'all') {
 
     try {
         const imagePaths = [
+            'img/Angel 1 Mockup (1).jpg',
+            'img/Angel Falling 14 Mockup.jpg',
+            'img/Artboard 1 Mockup.jpg',
             'img/Artboard 3 Mockup.jpg',
             'img/Artboard 4 Mockup.jpg',
             'img/Artboard 5 Mockup.jpg',
@@ -37,6 +40,7 @@ async function loadTshirts(category = 'all') {
             'img/Break The Rules Mockup.jpg',
             'img/Confident Mockup.jpg',
             'img/Cupid Sniper Streetwear Mockup (4) - Copy.jpg',
+            'img/Currency Mockup.jpg',
             'img/Dreams Cloth Mockup (2) - Copy.jpg',
             'img/Famous Mockup (2).jpg',
             'img/Famous Mockup (3) - Copy.jpg',
@@ -52,6 +56,10 @@ async function loadTshirts(category = 'all') {
             'img/INTROVERT Mockup - Copy (2).jpg',
             'img/INTROVERT Mockup (1) - Copy.jpg',
             'img/Keep Your Aim Well Mockup.jpg',
+            'img/Logo 1 Mockup.jpg',
+            'img/Logo 2 Mockup.jpg',
+            'img/Logo 3 Mockup.jpg',
+            'img/Logo 6 Mockup.jpg',
             'img/millennium Mockup (3).jpg',
             'img/millennium Mockup.jpg',
             'img/Next Gen Division Mockup (2).jpg',
@@ -63,10 +71,13 @@ async function loadTshirts(category = 'all') {
             'img/Oxygen Studio Mockup (6).jpg',
             'img/Oxygen Studio Mockup.jpg',
             'img/Push the Burner Mockup.jpg',
+            'img/Rebel Angle Streetwear Mockup.jpg',
             'img/RECKLESS CHILDS POSTER-1.png',
             'img/second poster-1.png',
             'img/Shark Clothing Mockup (5) - Copy - Copy - Copy.jpg',
             'img/Shark Clothing Mockup.jpg',
+            'img/Sweet Rose Mockup.jpg',
+            'img/The Bear Despair Mockup.jpg',
             'img/third poster.png',
             'img/Unidentified Flying Object Mockup - Copy (2).jpg',
             'img/Unidentified Flying Object Mockup.jpg',
@@ -82,7 +93,7 @@ async function loadTshirts(category = 'all') {
             'img/Worldwide Project 9 Mockup.jpg',
             'img/Worldwide Project 10 Mockup.jpg',
             'img/Worldwide Project Mockup.jpg'
-        ]; // Replace with actual image paths
+        ]; // Removed duplicates
         const links = imagePaths.filter(href => /\.(jpg|jpeg|png)$/i.test(href));
 
         if (links.length === 0) {
